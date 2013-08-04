@@ -12,6 +12,7 @@
 	</target>
 	<target depends="build" name="test">
 		<echo message="execute test" />
+		<mkdir dir="test_result" />
 		<junit printsummary="yes">
 			<classpath>
 				<path refid="Java-GA.classpath" />
