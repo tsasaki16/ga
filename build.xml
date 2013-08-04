@@ -17,8 +17,8 @@
 				<path refid="Java-GA.classpath"/>
 				<pathelement location="test_bin"/>
 			</classpath>
-			<formatter type="plain"/>
-			<test name="ga.CustomerTest"/>
+			<formatter type="xml" />
+			<test name="ga" />
 		</junit>
 	</target>
 	<target name="build">
