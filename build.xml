@@ -21,6 +21,7 @@
 	<target depends="build" name="test">
 		<echo message="execute test" />
 		<junit printsummary="yes">
+			<classpath refid="Java-GA.classpath" />
 			<formatter type="plain"/>
 			<test name="ga.CustomerTest"/>
 		</junit>
