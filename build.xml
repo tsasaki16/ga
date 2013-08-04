@@ -16,6 +16,7 @@
 		<junit printsummary="yes">
 			<classpath>
 				<path refid="Java-GA.classpath" />
+				<pathelement location="test_bin" />
 			</classpath>
 			<formatter type="xml" />
 			<batchtest todir="test_result">
