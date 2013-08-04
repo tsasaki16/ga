@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="test" name="Java-GA">
+	<property environment="env" />
+	<property name="target" value="1.6" />
+	<property name="source" value="1.6" />
+	<path id="Java-GA.classpath">
+		<pathelement location="bin" />
+		<pathelement location="lib/commons-math3-3.2.jar" />
+	</path>
+	<target name="init">
+		<copy includeemptydirs="false" todir="bin">
+			<fileset dir="src">
+				<exclude name="**/*.launch" />
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="clean">
+		<delete dir="bin" />
+	</target>
+	<target depends="build" name="test">
+		<echo message="execute test" />
+		<junit printsummary="yes">
+			<formatter type="plain"/>
+			<test name="ga.CustomerTest"/>
+		</junit>
+	</target>
+	<target name="build">
+		<echo message="javac to bin" />
+		<mkdir dir="bin" />
+		<javac srcdir="src" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+			<classpath refid="Java-GA.classpath" />
+		</javac>
+	</target>
+	<target name="GASampleMain">
+		<java classname="ga.GASampleMain" failonerror="true" fork="yes">
+			<classpath refid="Java-GA.classpath" />
+		</java>
+	</target>
+</project>
