@@ -18,7 +18,7 @@
 				<pathelement location="test_bin"/>
 			</classpath>
 			<formatter type="xml" />
-			<test name="ga" />
+			<test name="ga.CustomerTest" outfile="test_result/ga.xml" />
 		</junit>
 	</target>
 	<target name="build">
