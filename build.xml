@@ -20,7 +20,7 @@
 			</classpath>
 			<formatter type="xml" />
 			<batchtest todir="test_result">
-				<fileset dir="test_bin">
+				<fileset dir="test">
 					<include name="**/*Test.java" />
 				</fileset>
 			</batchtest>
@@ -33,9 +33,9 @@
 		<javac srcdir="src" destdir="bin" source="${source}" target="${target}" encoding="MS932">
 			<classpath refid="Java-GA.classpath" />
 		</javac>
-		<javac srcdir="test" destdir="test_bin" source="${source}" target="${target}" encoding="MS932">
+		<!-- javac srcdir="test" destdir="test_bin" source="${source}" target="${target}" encoding="MS932">
 			<classpath refid="Java-GA.classpath" />
-		</javac>
+		</javac -->
 	</target>
 	<target name="GASampleMain">
 		<java classname="ga.GASampleMain" failonerror="true" fork="yes">
