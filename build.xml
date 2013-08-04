@@ -28,7 +28,7 @@
 	<target name="build">
 		<echo message="javac to bin" />
 		<mkdir dir="bin" />
-		<javac srcdir="src" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+		<javac srcdir="src" destdir="bin" source="${source}" target="${target}" encoding="MS932">
 			<classpath refid="Java-GA.classpath" />
 		</javac>
 	</target>
