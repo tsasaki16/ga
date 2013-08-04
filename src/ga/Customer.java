@@ -1,12 +1,14 @@
 package ga;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * 訪問先のクラス。 IDと位置を持ちます。 IDは生成した順に整数が付与されます。
  */
 public class Customer implements Comparable<Customer> {
 
 	// ID生成用のシーケンス番号
-	private static int seq = 1;
+	private static AtomicInteger seq = new AtomicInteger(1);
 
 	// ノードのID
 	private int id;
@@ -25,7 +27,7 @@ public class Customer implements Comparable<Customer> {
 	 *            Y座標[0, 1]
 	 */
 	public Customer(double x, double y) {
-		id = seq++;
+		id = seq.getAndIncrement();
 		location = new double[] { x, y };
 	}
 
