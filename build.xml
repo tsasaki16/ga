@@ -14,11 +14,11 @@
 		<echo message="execute test" />
 		<junit printsummary="yes">
 			<classpath>
-				<path refid="Java-GA.classpath"/>
-				<pathelement location="test_bin"/>
+				<path refid="Java-GA.classpath" />
+				<pathelement location="test_bin" />
 			</classpath>
 			<formatter type="xml" />
-			<test name="ga.CustomerTest" outfile="test_result/ga" />
+			<test name="ga.CustomerTest" todir="test_result" outfile="ga" />
 		</junit>
 	</target>
 	<target name="build">
