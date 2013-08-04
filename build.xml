@@ -33,6 +33,9 @@
 		<javac srcdir="src" destdir="bin" source="${source}" target="${target}" encoding="MS932">
 			<classpath refid="Java-GA.classpath" />
 		</javac>
+		<javac srcdir="test" destdir="test_bin" source="${source}" target="${target}" encoding="MS932">
+			<classpath refid="Java-GA.classpath" />
+		</javac>
 	</target>
 	<target name="GASampleMain">
 		<java classname="ga.GASampleMain" failonerror="true" fork="yes">
