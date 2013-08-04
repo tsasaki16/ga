@@ -19,7 +19,7 @@
 				<pathelement location="test_bin" />
 			</classpath>
 			<formatter type="xml" />
-			<batchtest todir="test_result" outfile="ga">
+			<batchtest todir="test_result">
 				<fileset dir="test_bin">
 					<include name="**/*Test.java" />
 				</fileset>
