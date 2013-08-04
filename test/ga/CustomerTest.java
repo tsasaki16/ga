@@ -1,18 +1,17 @@
 package ga;
 
-import static org.junit.Assert.*;
+import junit.framework.TestCase;
 
-import org.junit.Test;
 
-public class CustomerTest {
+public class CustomerTest extends TestCase {
 
-	@Test
 	public void testGetLocation() {
 		Customer c1 = new Customer(0, 1);
-		assertArrayEquals(new double[]{0, 1}, c1.getLocation(), 0);
+		double[] location = c1.getLocation();
+		assertEquals(0, location[0], 0.0);
+		assertEquals(1, location[1], 0.0);
 	}
 
-	@Test
 	public void testCompareTo() {
 		Customer c1 = new Customer(0, 1);
 		Customer c2 = new Customer(0, 0);
