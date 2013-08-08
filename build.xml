@@ -43,13 +43,6 @@
 	</target>
 
 	<target name="cobertura_instrument" depends="build" description="classファイルにログ出力用コード追加">
-		<path id="cobertura.classpath">
-			<fileset dir="...">
-				<include name="cobertura.jar" />
-				<include name="lib/**/*.jar" />
-			</fileset>
-		</path>
-		<taskdef classpathref="cobertura.classpath" resource="tasks.properties" />
 		<mkdir dir="bin/cobertura" />
 		<cobertura-instrument todir="bin/cobertura">
 			<fileset dir="bin">
