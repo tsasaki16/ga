@@ -26,4 +26,16 @@ public class CustomerTest extends TestCase {
 		assertTrue(c2.compareTo(c1) > 0);
 	}
 
+	public void testToString() {
+		Customer c1 = new Customer(0, 1);
+		assertEquals(c1.getCustomerId(), Integer.valueOf(c1.toString())
+				.intValue());
+	}
+
+	public void testGetInformation() {
+		Customer c1 = new Customer(2, 1);
+		assertEquals(c1.getCustomerId() + ", 2.0, 1.0", c1.getInformation());
+
+	}
+
 }
