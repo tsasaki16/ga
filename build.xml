@@ -53,7 +53,7 @@
 	</target>
 
 	<target name="coverage_report" depends="test" description="coverageレポート出力">
-		<mkdir dir="covarages" />
+		<mkdir dir="coverages" />
 		<cobertura-report srcdir="src" destdir="coverages" format="xml" encoding="utf8" />
 	</target>
 </project>
