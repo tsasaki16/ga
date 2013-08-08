@@ -19,6 +19,7 @@
 		<junit fork="true" printsummary="yes">
 			<sysproperty key="net.sourceforge.cobertura.datafile" file="cobertura.ser" />
 			<classpath>
+				<path refid="cobertura.classpath" />
 				<pathelement location="bin/cobertura/" />
 				<path refid="Java-GA.classpath" />
 				<pathelement location="test_bin" />
