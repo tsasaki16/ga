@@ -2,7 +2,7 @@
 <project basedir="." default="coverage_report" name="Java-GA">
 	<path id="cobertura.classpath">
 		<fileset dir="${ant.library.dir}">
-			<include name="**/*.jar" />
+			<include name="cobertura/*.jar" />
 		</fileset>
 	</path>
 	<taskdef classpathref="cobertura.classpath" resource="tasks.properties" />
