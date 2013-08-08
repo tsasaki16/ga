@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project basedir="." default="coverage_report" name="Java-GA">
-	<taskdef classpathref="cobertura.classpath" resource="tasks.properties" />
+	<taskdef resource="tasks.properties" />
 	<property environment="env" />
 	<property name="target" value="1.6" />
 	<property name="source" value="1.6" />
