@@ -20,7 +20,7 @@
 			<sysproperty key="net.sourceforge.cobertura.datafile" file="cobertura.ser" />
 			<classpath>
 				<path refid="cobertura.classpath" />
-				<pathelement location="bin/cobertura" />
+				<pathelement location="cobertura" />
 				<pathelement location="lib/commons-math3-3.2.jar" />
 				<pathelement location="test" />
 			</classpath>
@@ -44,8 +44,8 @@
 	</target>
 
 	<target name="cobertura_instrument" depends="build" description="classファイルにログ出力用コード追加">
-		<mkdir dir="bin/cobertura" />
-		<cobertura-instrument todir="bin/cobertura">
+		<mkdir dir="cobertura" />
+		<cobertura-instrument todir="cobertura">
 			<fileset dir="bin">
 				<include name="**/*.class" />
 			</fileset>
