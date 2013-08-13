@@ -22,7 +22,7 @@
 				<path refid="cobertura.classpath" />
 				<pathelement location="bin/cobertura/" />
 				<path refid="Java-GA.classpath" />
-				<pathelement location="test_bin" />
+				<pathelement location="test" />
 			</classpath>
 			<formatter type="xml" />
 			<batchtest todir="test_result">
