@@ -11,6 +11,7 @@ public class CustomerTest extends TestCase {
 		assertEquals(1, location[1], 0.0);
 	}
 
+	//@Test
 	public void testCompareTo() {
 		Customer c1 = new Customer(0, 1);
 		Customer c2 = new Customer(0, 0);
