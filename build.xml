@@ -20,7 +20,7 @@
 			<sysproperty key="net.sourceforge.cobertura.datafile" file="cobertura.ser" />
 			<classpath>
 				<path refid="cobertura.classpath" />
-				<pathelement location="bin/cobertura/" />
+				<pathelement location="bin/cobertura" />
 				<path refid="Java-GA.classpath" />
 				<pathelement location="test" />
 			</classpath>
