@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project basedir="." default="coverage_report" name="Java-GA">
-	<property name="net.sourceforge.cobertura.datafile" value="${basedir}/cobertura.ser" />
 	<path id="cobertura.classpath">
 		<fileset dir="${ant.library.dir}">
 			<include name="cobertura/*.jar" />
@@ -18,12 +17,13 @@
 		<echo message="execute test" />
 		<mkdir dir="test_result" />
 		<junit fork="true" printsummary="yes">
+			<sysproperty key="net.sourceforge.cobertura.datafile" file="${basedir}/cobertura.ser" />
 			<formatter type="xml" />
 			<classpath>
 				<path refid="cobertura.classpath" />
-				<path path="cobertura" />
-				<pathelement location="lib/commons-math3-3.2.jar" />
-				<path path="test" />
+				<path location="cobertura" />
+				<path refid="Java-GA.classpath" />
+				<path location="test" />
 			</classpath>
 			<batchtest todir="test_result">
 				<fileset dir="test">
