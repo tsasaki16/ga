@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project basedir="." default="coverage_report" name="Java-GA">
-	<sysproperty key="net.sourceforge.cobertura.datafile" file="${basedir}/cobertura.ser" />
+	<property name="net.sourceforge.cobertura.datafile" value="${basedir}/cobertura.ser" />
 	<path id="cobertura.classpath">
 		<fileset dir="${ant.library.dir}">
 			<include name="cobertura/*.jar" />
