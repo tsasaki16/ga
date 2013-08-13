@@ -18,13 +18,13 @@
 		<mkdir dir="test_result" />
 		<junit fork="true" printsummary="yes">
 			<sysproperty key="net.sourceforge.cobertura.datafile" file="cobertura.ser" />
+			<formatter type="xml" />
 			<classpath>
 				<path refid="cobertura.classpath" />
-				<pathelement location="cobertura" />
+				<path path="cobertura" />
 				<pathelement location="lib/commons-math3-3.2.jar" />
-				<pathelement location="test" />
+				<path path="test" />
 			</classpath>
-			<formatter type="xml" />
 			<batchtest todir="test_result">
 				<fileset dir="test">
 					<include name="**/*Test.java" />
