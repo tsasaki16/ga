@@ -21,7 +21,7 @@
 			<classpath>
 				<path refid="cobertura.classpath" />
 				<pathelement location="bin/cobertura" />
-				<path refid="Java-GA.classpath" />
+				<pathelement location="lib/commons-math3-3.2.jar" />
 				<pathelement location="test" />
 			</classpath>
 			<formatter type="xml" />
