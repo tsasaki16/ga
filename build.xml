@@ -27,7 +27,7 @@
 			</classpath>
 			<batchtest todir="test_result">
 				<fileset dir="test">
-					<include name="**/*Test.java" />
+					<include name="**/**Test.java" />
 				</fileset>
 			</batchtest>
 		</junit>
@@ -48,7 +48,7 @@
 		<mkdir dir="cobertura" />
 		<cobertura-instrument todir="cobertura" ignoretrivial="false">
 			<fileset dir="bin">
-				<include name="**/*.class" />
+				<include name="**/**.class" />
 			</fileset>
 		</cobertura-instrument>
 	</target>
