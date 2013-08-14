@@ -41,7 +41,7 @@ public class Customer implements Comparable<Customer> {
 
 	@Override
 	public int compareTo(Customer customer) {
-		return Integer.compare(id, customer.getCustomerId());
+		return id - customer.getCustomerId();
 	}
 
 	public String toString() {
