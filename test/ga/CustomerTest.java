@@ -1,9 +1,12 @@
 package ga;
 
-import junit.framework.TestCase;
+import static org.junit.Assert.*;
 
-public class CustomerTest extends TestCase {
+import org.junit.Test;
 
+public class CustomerTest {
+
+	@Test
 	public void testGetLocation() {
 		Customer c1 = new Customer(0, 1);
 		double[] location = c1.getLocation();
@@ -11,6 +14,7 @@ public class CustomerTest extends TestCase {
 		assertEquals(1, location[1], 0.0);
 	}
 
+	@Test
 	public void testCompareTo() {
 		Customer c1 = new Customer(0, 1);
 		Customer c2 = new Customer(0, 0);
@@ -26,12 +30,14 @@ public class CustomerTest extends TestCase {
 		assertTrue(c2.compareTo(c1) > 0);
 	}
 
+	@Test
 	public void testToString() {
 		Customer c1 = new Customer(0, 1);
 		assertEquals(c1.getCustomerId(), Integer.valueOf(c1.toString())
 				.intValue());
 	}
 
+	@Test
 	public void testGetInformation() {
 		Customer c1 = new Customer(2, 1);
 		assertEquals(c1.getCustomerId() + ", 2.0, 1.0", c1.getInformation());
