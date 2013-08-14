@@ -23,6 +23,7 @@
 				<path refid="cobertura.classpath" />
 				<path location="cobertura" />
 				<pathelement location="lib/commons-math3-3.2.jar" />
+				<path location="test_bin" />
 			</classpath>
 			<batchtest todir="test_result">
 				<fileset dir="test">
@@ -50,7 +51,10 @@
 			<fileset dir="bin">
 				<include name="**/*.class" />
 			</fileset>
-		</cobertura-instrument>
+			<instrumentationClasspath>
+				<path refid="Java-GA.classpath" />
+				<pathelement location="test_bun" />
+			</instrumentationClasspath>		</cobertura-instrument>
 	</target>
 
 	<target name="coverage_report" depends="test" description="coverageレポート出力">
