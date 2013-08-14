@@ -38,7 +38,7 @@
 		<javac srcdir="src" destdir="bin" source="${source}" target="${target}" encoding="MS932" includeantruntime="false">
 			<classpath refid="Java-GA.classpath" />
 		</javac>
-		<mkdir dir="test_bin"/>
+		<mkdir dir="test_bin" />
 		<javac srcdir="test" destdir="test_bin" source="${source}" target="${target}" encoding="MS932" includeantruntime="true">
 			<classpath refid="Java-GA.classpath" />
 		</javac>
@@ -51,10 +51,10 @@
 			<fileset dir="bin">
 				<include name="**/*.class" />
 			</fileset>
-			<instrumentationClasspath>
-				<path refid="Java-GA.classpath" />
-				<pathelement location="test_bun" />
-			</instrumentationClasspath>		</cobertura-instrument>
+			<fileset dir="lib">
+				<include name="**/*.jar" />
+			</fileset>
+		</cobertura-instrument>
 	</target>
 
 	<target name="coverage_report" depends="test" description="coverageレポート出力">
