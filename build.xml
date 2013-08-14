@@ -30,18 +30,6 @@
 				</fileset>
 			</batchtest>
 		</junit>
-		<junit printsummary="yes">
-			<formatter type="xml" />
-			<classpath>
-				<path refid="Java-GA.classpath" />
-				<path location="test_bin" />
-			</classpath>
-			<batchtest todir="test_result">
-				<fileset dir="test">
-					<include name="**/*Test.java" />
-				</fileset>
-			</batchtest>
-		</junit>
 	</target>
 	<target name="build">
 		<echo message="javac to bin" />
