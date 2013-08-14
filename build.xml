@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project basedir="." default="coverage_report" name="Java-GA">
+<project basedir="." default="coverage_report" name="javaga">
 	<path id="cobertura.classpath">
 		<fileset dir="${ant.library.dir}">
 			<include name="cobertura.jar" />
@@ -22,12 +22,12 @@
 			<classpath>
 				<path refid="cobertura.classpath" />
 				<path location="cobertura" />
-				<path refid="Java-GA.classpath" />
+				<pathelement location="lib/commons-math3-3.2.jar" />
 				<path location="test_bin" />
 			</classpath>
 			<batchtest todir="test_result">
 				<fileset dir="test">
-					<include name="**/**Test.java" />
+					<include name="**/*Test.java" />
 				</fileset>
 			</batchtest>
 		</junit>
@@ -46,9 +46,9 @@
 
 	<target name="cobertura_instrument" depends="build" description="classファイルにログ出力用コード追加">
 		<mkdir dir="cobertura" />
-		<cobertura-instrument todir="cobertura" ignoretrivial="false">
+		<cobertura-instrument todir="cobertura" datafile="${basedir}/cobertura.ser">
 			<fileset dir="bin">
-				<include name="**/**.class" />
+				<include name="**/*.class" />
 			</fileset>
 		</cobertura-instrument>
 	</target>
