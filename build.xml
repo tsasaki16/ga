@@ -12,6 +12,7 @@
 	<path id="Java-GA.classpath">
 		<pathelement location="bin" />
 		<pathelement location="lib/commons-math3-3.2.jar" />
+		<pathelement location="C:/eclipse4.2/eclipse/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100/junit.jar"/>
 	</path>
 	<target depends="cobertura_instrument" name="test">
 		<echo message="execute test" />
@@ -23,7 +24,7 @@
 				<path refid="cobertura.classpath" />
 				<path location="cobertura" />
 				<path refid="Java-GA.classpath" />
-				<path location="test" />
+				<path location="test_bin" />
 			</classpath>
 			<batchtest todir="test_result">
 				<fileset dir="test">
@@ -38,7 +39,8 @@
 		<javac srcdir="src" destdir="bin" source="${source}" target="${target}" encoding="MS932">
 			<classpath refid="Java-GA.classpath" />
 		</javac>
-		<javac srcdir="test" destdir="test" source="${source}" target="${target}" encoding="MS932" includeantruntime="true">
+		<mkdir dir="test_bin"/>
+		<javac srcdir="test" destdir="test_bin" source="${source}" target="${target}" encoding="MS932" includeantruntime="true">
 			<classpath refid="Java-GA.classpath" />
 		</javac>
 	</target>
