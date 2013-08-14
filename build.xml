@@ -16,12 +16,23 @@
 	<target depends="cobertura_instrument" name="test">
 		<echo message="execute test" />
 		<mkdir dir="test_result" />
-		<junit fork="true" printsummary="yes">
+		<junit fork="true">
 			<sysproperty key="net.sourceforge.cobertura.datafile" file="${basedir}/cobertura.ser" />
-			<formatter type="xml" />
 			<classpath>
 				<path refid="cobertura.classpath" />
 				<path location="cobertura" />
+				<path refid="Java-GA.classpath" />
+				<path location="test_bin" />
+			</classpath>
+			<batchtest todir="test_result">
+				<fileset dir="test">
+					<include name="**/*Test.java" />
+				</fileset>
+			</batchtest>
+		</junit>
+		<junit printsummary="yes">
+			<formatter type="xml" />
+			<classpath>
 				<path refid="Java-GA.classpath" />
 				<path location="test_bin" />
 			</classpath>
