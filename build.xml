@@ -24,6 +24,7 @@
 				<pathelement location="lib/commons-math3-3.2.jar" />
 				<path refid="cobertura.classpath" />
 				<path location="test_bin" />
+				<path location="${ant.library.dir}" />
 			</classpath>
 			<batchtest todir="test_result">
 				<fileset dir="test">
