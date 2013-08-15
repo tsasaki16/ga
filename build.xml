@@ -23,7 +23,7 @@
 				<path location="cobertura" />
 				<path refid="cobertura.classpath" />
 				<path location="test_bin" />
-				<path location="${ant.library.dir}" />
+				<path location="${ant.library.dir}/junit.jar" />
 				<path refid="Java-GA.classpath" />
 			</classpath>
 			<batchtest todir="test_result">
