@@ -2,7 +2,7 @@
 <project basedir="." default="coverage_report" name="javaga">
 	<path id="cobertura.classpath">
 		<fileset dir="/usr/share/cobertura/">
-			<include name="cobertura-2.0.2.jar" />
+			<include name="cobertura.jar" />
 			<include name="lib/**.jar" />
 		</fileset>
 	</path>
