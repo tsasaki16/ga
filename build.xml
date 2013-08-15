@@ -39,15 +39,16 @@
 			<classpath refid="Java-GA.classpath" />
 		</javac>
 		<mkdir dir="test_bin" />
-		<javac srcdir="test" destdir="test_bin" source="${source}" target="${target}" encoding="MS932" includeantruntime="true">
+		<javac srcdir="test" destdir="test_bin" source="${source}" target="${target}" encoding="MS932" includeantruntime="false">
 			<classpath refid="Java-GA.classpath" />
+			<classpath location="${ant.library.dir}/junit.jar" />
 		</javac>
 	</target>
 
 	<target name="cobertura_instrument" depends="build" description="classファイルにログ出力用コード追加">
 		<mkdir dir="cobertura" />
 		<delete file="cobertura.ser" />
-		<cobertura-instrument todir="cobertura" datafile="${basedir}/cobertura.ser">
+		<cobertura-instrument todir="${basedir}/cobertura" datafile="${basedir}/cobertura.ser">
 			<fileset dir="bin">
 				<include name="**/*.class" />
 			</fileset>
