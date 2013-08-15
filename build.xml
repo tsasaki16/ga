@@ -24,7 +24,7 @@
 				<path refid="cobertura.classpath" />
 				<path location="test_bin" />
 				<path location="${ant.library.dir}/junit.jar" />
-				<pathelement location="lib/**.jar" />
+				<path refid="Java-GA.classpath" />
 			</classpath>
 			<batchtest todir="test_result">
 				<fileset dir="test">
@@ -36,7 +36,7 @@
 	<target name="build">
 		<echo message="javac to bin" />
 		<mkdir dir="bin" />
-		<javac srcdir="src" destdir="bin" source="${source}" target="${target}" encoding="MS932" includeantruntime="false" debug="yes">
+		<javac srcdir="src" destdir="bin" source="${source}" target="${target}" encoding="MS932" includeantruntime="false">
 			<classpath refid="Java-GA.classpath" />
 		</javac>
 		<mkdir dir="test_bin" />
