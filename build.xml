@@ -51,9 +51,6 @@
 			<fileset dir="bin">
 				<include name="**/*.class" />
 			</fileset>
-			<fileset dir="lib">
-				<include name="**/*.jar" />
-			</fileset>
 		</cobertura-instrument>
 	</target>
 
