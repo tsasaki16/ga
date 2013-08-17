@@ -46,6 +46,7 @@ public class CustomerTest {
 		Customer c1 = new Customer(0, 0);
 		Customer c2 = new Customer(0, 0);
 		assertTrue(c1.hashCode() != c2.hashCode());
+		assertTrue(c1.hashCode() == c1.hashCode());
 	}
 
 	@Test
