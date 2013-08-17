@@ -43,7 +43,7 @@ public class Customer implements Comparable<Customer> {
 	public int compareTo(Customer customer) {
 		return id - customer.getCustomerId();
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof Customer) {
@@ -51,13 +51,11 @@ public class Customer implements Comparable<Customer> {
 		}
 		return false;
 	}
-	
-	
 
 	public String toString() {
 		return String.valueOf(id);
 	}
-	
+
 	public String getInformation() {
 		return id + ", " + location[0] + ", " + location[1];
 	}
