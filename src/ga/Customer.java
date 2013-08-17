@@ -51,7 +51,13 @@ public class Customer implements Comparable<Customer> {
 		}
 		return false;
 	}
+	
+	@Override
+	public int hashCode() {
+		return Integer.valueOf(id).hashCode();
+	}
 
+	@Override
 	public String toString() {
 		return String.valueOf(id);
 	}
