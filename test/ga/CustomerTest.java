@@ -30,7 +30,7 @@ public class CustomerTest {
 		assertTrue(c3.compareTo(c1) > 0);
 		assertTrue(c2.compareTo(c1) > 0);
 	}
-	
+
 	@Test
 	public void testEquals() {
 		Customer c1 = new Customer(0, 0);
@@ -40,13 +40,12 @@ public class CustomerTest {
 		assertTrue(!c1.equals(c2));
 		assertTrue(!c2.equals(c1));
 	}
-	
+
 	@Test
 	public void testHashcode() {
 		Customer c1 = new Customer(0, 0);
 		Customer c2 = new Customer(0, 0);
 		assertTrue(c1.hashCode() != c2.hashCode());
-		
 	}
 
 	@Test
@@ -60,7 +59,6 @@ public class CustomerTest {
 	public void testGetInformation() {
 		Customer c1 = new Customer(2, 1);
 		assertEquals(c1.getCustomerId() + ", 2.0, 1.0", c1.getInformation());
-
 	}
 
 }
