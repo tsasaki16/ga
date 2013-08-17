@@ -37,7 +37,7 @@
 		<echo message="javac to bin" />
 		<mkdir dir="bin" />
 		<javac srcdir="src" destdir="bin" source="${source}" target="${target}" encoding="MS932"
-			includeantruntime="false" debug="yes" debuglevel="lines">
+			includeantruntime="false" debug="yes" debuglevel="lines,vars,source">
 			<classpath refid="Java-GA.classpath" />
 		</javac>
 		<mkdir dir="test_bin" />
