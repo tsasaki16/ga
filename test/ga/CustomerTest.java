@@ -30,6 +30,16 @@ public class CustomerTest {
 		assertTrue(c3.compareTo(c1) > 0);
 		assertTrue(c2.compareTo(c1) > 0);
 	}
+	
+	@Test
+	public void testEquals() {
+		Customer c1 = new Customer(0, 0);
+		Customer c2 = new Customer(0, 0);
+		assertTrue(c1.equals(c1));
+		assertTrue(c2.equals(c2));
+		assertTrue(!c1.equals(c2));
+		assertTrue(!c2.equals(c1));
+	}
 
 	@Test
 	public void testToString() {

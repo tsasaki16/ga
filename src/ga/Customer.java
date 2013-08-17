@@ -16,7 +16,7 @@ public class Customer implements Comparable<Customer> {
 	/**
 	 * 座標[x,y]
 	 */
-	private double[] location;
+	private transient double[] location;
 
 	/**
 	 * 位置を指定してインスタンスを生成します。
@@ -43,6 +43,16 @@ public class Customer implements Comparable<Customer> {
 	public int compareTo(Customer customer) {
 		return id - customer.getCustomerId();
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Customer) {
+			return ((Customer) obj).id == id;
+		}
+		return false;
+	}
+	
+	
 
 	public String toString() {
 		return String.valueOf(id);
