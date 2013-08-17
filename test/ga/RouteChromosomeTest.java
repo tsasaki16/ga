@@ -11,7 +11,7 @@ import org.junit.Test;
 public class RouteChromosomeTest {
 
 	@Test
-	public void testConstructor() {
+	public void testConstructor01() {
 		try {
 			RouteChromosome.setCustomers(Arrays.asList(new Customer(0, 1)));
 			RouteChromosome r = new RouteChromosome(Arrays.asList(0.1));
@@ -20,4 +20,13 @@ public class RouteChromosomeTest {
 			fail();
 		}
 	}
+
+	@Test
+	public void testConstructor02() {
+		RouteChromosome.setCustomers(Arrays.asList(new Customer(0, 1), new Customer(1, 1)));
+		RouteChromosome.setStartPoint(new double[] {0, 0});
+		RouteChromosome r = new RouteChromosome(Arrays.asList(0.1, 0.2));
+		assertEquals(-3.414, r.fitness(), 0.001);
+	}
+
 }
