@@ -29,4 +29,12 @@ public class RouteChromosomeTest {
 		assertEquals(-3.414, r.fitness(), 0.001);
 	}
 
+	@Test
+	public void testConstructor03() {
+		RouteChromosome.setCustomers(Arrays.asList(new Customer(0, 1), new Customer(0, 1)));
+		RouteChromosome.setStartPoint(new double[] {0, 0});
+		RouteChromosome r = new RouteChromosome(Arrays.asList(0.1, 0.2));
+		assertEquals(-2.0, r.fitness(), 0.001);
+	}
+
 }
