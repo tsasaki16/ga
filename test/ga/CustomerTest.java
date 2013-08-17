@@ -40,6 +40,14 @@ public class CustomerTest {
 		assertTrue(!c1.equals(c2));
 		assertTrue(!c2.equals(c1));
 	}
+	
+	@Test
+	public void testHashcode() {
+		Customer c1 = new Customer(0, 0);
+		Customer c2 = new Customer(0, 0);
+		assertTrue(c1.hashCode() != c2.hashCode());
+		
+	}
 
 	@Test
 	public void testToString() {
