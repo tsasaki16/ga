@@ -16,6 +16,7 @@
 	<target depends="cobertura_instrument" name="test">
 		<echo message="execute test" />
 		<mkdir dir="test_result" />
+		<delete file="cobertura.ser" />
 		<junit fork="true" printsummary="true">
 			<sysproperty key="net.sourceforge.cobertura.datafile" file="${basedir}/cobertura.ser" />
 			<formatter type="xml" />
