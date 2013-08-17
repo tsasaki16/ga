@@ -16,7 +16,7 @@ public class RouteChromosome extends RandomKey<Customer> {
 	private static List<Customer> customers;
 
 	// 出発点
-	private static double[] startPoint;
+	private static double[] startPoint = new double[] { 0.0, 0.0 };
 
 	// 訪問先リストを設定
 	protected static void setCustomers(List<Customer> customers) {
