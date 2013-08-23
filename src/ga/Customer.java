@@ -35,6 +35,10 @@ public class Customer implements Comparable<Customer> {
 		return id;
 	}
 
+	/**
+	 * ˆÊ’u‚ğæ“¾‚µ‚Ü‚·
+	 * @return À•W {x, y}
+	 */
 	public double[] getLocation() {
 		return location;
 	}
