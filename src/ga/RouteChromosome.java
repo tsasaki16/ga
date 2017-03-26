@@ -33,7 +33,6 @@ public class RouteChromosome extends RandomKey<Customer> {
 		super(representation);
 	}
 
-	@Override
 	public double fitness() {
 		// ˆÚ“®‚Ì‘‹——£
 		double totalDistance = 0;

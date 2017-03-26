@@ -43,7 +43,6 @@ public class Customer implements Comparable<Customer> {
 		return location;
 	}
 
-	@Override
 	public int compareTo(Customer customer) {
 		return id - customer.getCustomerId();
 	}
